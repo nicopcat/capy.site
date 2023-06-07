@@ -5,8 +5,10 @@ import { ref } from 'vue'
 <template>
   <div class="w-screen flex flex-col">
     <!-- 图片层 -->
-    <div class="w-full h-auto sm:h-screen mb-10 sm:mb-40">
-      <img class="hidden w-0 lg:block lg:w-full" src="@/assets/bg.jpg" alt="" max-height="100vh">
+    <div class="h-auto :smh-screen my-10 sm:mb-40 flex justify-center">
+      <div class="hidden w-0 sm:block sm:w-4/5 mx-4">
+        <img src="@/assets/bg.jpg" alt="">
+      </div>
       <div class="pl-4 py-8 text-start sm:hidden">
         <p class="">
           The capybara or greater capybara (Hydrochoerus hydrochaeris) is a giant cavy rodent native to South America.
@@ -29,7 +31,8 @@ import { ref } from 'vue'
         </p>
       </div>
     </div>
-    <!-- 个人信息层 -->
+
+    <!-- 信息层 -->
     <div class="w-screen mb-10 sm:mb-40">
       <div class="flex flex-col sm:flex-row justify-around">
         <div>

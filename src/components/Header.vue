@@ -4,7 +4,7 @@ let isHide = ref(true);
 </script>
 <template>
   <nav class="bg-white shadow-sm w-screen">
-    <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-8xl mx-auto px-2 sm:px-5">
       <div class="flex justify-between">
         <div class="flex space-x-7">
           <div>
@@ -15,7 +15,7 @@ let isHide = ref(true);
             </a>
           </div>
           <!-- Primary Navbar items -->
-          <div class="hidden md:flex items-center space-x-1">
+          <div class="hidden md:flex items-center space-x-4 ">
             <a href="" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Home</a>
             <a href=""
               class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Services</a>
@@ -47,7 +47,7 @@ let isHide = ref(true);
     </div>
     <!-- mobile menu -->
     <div :class="{ hidden: isHide }">
-      <ul class="absolute top-14 right-4">
+      <ul class="fixed top-14 right-4">
         <li class="active">
           <a href="index.html" class="block text-sm px-2 py-2 text-white bg-green-500 font-semibold">Home</a>
         </li>
