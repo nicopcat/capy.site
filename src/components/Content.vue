@@ -4,6 +4,9 @@ import { ref } from 'vue'
 
 <template>
   <div class="w-screen flex flex-col">
+    <avue-form-design style="height: 86vh;" 
+                  storage :toolbar="toolbar"
+                  @submit="handleSubmit"></avue-form-design>
     <!-- 图片层 -->
     <div class="h-auto :smh-screen my-10 sm:mb-40 flex justify-center">
       <div class="hidden w-0 sm:block sm:w-4/5 mx-4">
@@ -67,5 +70,13 @@ import { ref } from 'vue'
     </div>
   </div>
 </template>
+<script >
+
+const handleSubmit = (e) =>{
+  console.log(e);
+}
+
+const toolbar = [  'preview', 'save']
+</script>
 
 <style scoped></style>

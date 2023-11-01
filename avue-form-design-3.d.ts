@@ -1,0 +1,1 @@
+declare module 'avue-form-design-3';
