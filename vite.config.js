@@ -12,23 +12,21 @@ export default defineConfig({
       prodUrl: `/{path}`,
       modules: [
         {
-          name:"vue",
-          var:"Vue",
-          path: 'cdn/vue/dist/vue.global.prod.js',
-        },
-
-        {
-          name:"element-plus",
-          var:"ElementPlus",
-          path: 'cdn/element-plus/dist/index.full.js',
-          css: 'cdn/element-plus//dist/index.css'
-        },
-        {
-          name:"@smallwei/avue",
-          var:"AVUE",
-          path:"cdn/avue/lib/avue.min.js",
-          css: 'cdn/avue/lib/index.css'
-        },
+          name: 'vue',
+          var: 'Vue',
+          path: 'https://cdn.jsdelivr.net/npm/vue@3.2.25/dist/vue.global.prod.js'
+      },
+      {
+          name: 'element-plus',
+          var: 'ElementPlus',
+          path: `https://unpkg.com/element-plus@2.2.30/dist/index.full.js`,
+          css: 'https://unpkg.com/element-plus/dist/index.css'
+      },
+      {
+          name: '@smallwei/avue',
+          var: 'AVUE',
+          path: 'https://cdn.jsdelivr.net/npm/@smallwei/avue@3.2.20'
+      },
         {
           name:"avue-form-design-3",
           var:"AvueFormDesign",
