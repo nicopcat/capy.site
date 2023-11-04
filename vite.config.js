@@ -9,28 +9,28 @@ import  { autoComplete, Plugin as importToCDN } from 'vite-plugin-cdn-import'
 export default defineConfig({
   plugins: [vue(), visualizer(),
     importToCDN({
-      prodUrl: `/{path}`,
+      prodUrl: `/cdn/{path}`,
       modules: [
         {
           name: 'vue',
           var: 'Vue',
-          path: 'https://cdn.jsdelivr.net/npm/vue@3.2.25/dist/vue.global.prod.js'
+          path: 'vue/dist/vue.global.prod.js'
       },
       {
           name: 'element-plus',
           var: 'ElementPlus',
-          path: `https://unpkg.com/element-plus@2.2.30/dist/index.full.js`,
-          css: 'https://unpkg.com/element-plus/dist/index.css'
+          path: `element-plus/dist/index.full.min.js`,
+          css: 'element-plus/dist/index.css'
       },
       {
           name: '@smallwei/avue',
           var: 'AVUE',
-          path: 'https://cdn.jsdelivr.net/npm/@smallwei/avue@3.2.20'
+          path: 'avue/lib/avue.min.js'
       },
         {
           name:"avue-form-design-3",
           var:"AvueFormDesign",
-          path:"cdn/avue-form-design-3/lib/index.umd.js"
+          path:"avue-form-design-3/lib/index.umd.js"
         },
       ]
   }),
@@ -43,6 +43,6 @@ export default defineConfig({
     }
   },
   server: {
-    port: 3000,
+    port: 8080,
   }
 })

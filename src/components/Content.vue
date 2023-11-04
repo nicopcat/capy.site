@@ -4,10 +4,22 @@ import { ref } from 'vue'
 
 <template>
   <div class="w-screen flex flex-col">
-    <avue-form-design style="height: 86vh;" 
-                  storage :toolbar="toolbar"
-                  @submit="handleSubmit"></avue-form-design>
+
     <!-- 图片层 -->
+    <el-button type="primary" size="default" @click="designerVisible = true">打开设计器</el-button>
+    <el-dialog title="设计器" v-model="designerVisible" fullscreen>
+      <span>
+        <avue-form-design style="height: 86vh;" storage :toolbar="toolbar" @submit="handleSubmit"></avue-form-design>
+
+      </span>
+      <template #footer>
+        <span>
+          <el-button @click="designerVisible = false">Cancel</el-button>
+          <el-button type="primary" @click="">OK</el-button>
+        </span>
+      </template>
+    </el-dialog>
+
     <div class="h-auto :smh-screen my-10 sm:mb-40 flex justify-center">
       <div class="hidden w-0 sm:block sm:w-4/5 mx-4">
         <img src="@/assets/bg.jpg" alt="">
@@ -72,11 +84,13 @@ import { ref } from 'vue'
 </template>
 <script >
 
-const handleSubmit = (e) =>{
+const handleSubmit = (e) => {
   console.log(e);
 }
 
-const toolbar = [  'preview', 'save']
+const toolbar = ['preview', 'save']
+
+const designerVisible = ref(false)
 </script>
 
 <style scoped></style>
